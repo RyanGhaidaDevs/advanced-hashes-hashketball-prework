@@ -1,4 +1,5 @@
-# Write your code here!
+require 'pry'
+
 def game_hash
   {
   :home => {
@@ -128,27 +129,20 @@ end
 
 def num_points_scored(name)
 
-game_hash.each do |team, team_hash|
-
-
+  game_hash.each do |team, team_hash|
 
     team_hash[:players].each do |player, player_hash|
 
        if player[:name] == name
-
           return player[:points]
       end
-
     end
-
   end
 end
 
 def shoe_size(name)
 
 game_hash.each do |team, team_hash|
-
-
 
     team_hash[:players].each do |player, player_hash|
 
@@ -236,14 +230,9 @@ def player_stats(player_name)
 
     team_hash[:players].collect do |player_hash|
 
-
       if player_hash[:name] == player_name
 
           return player_hash
-
-
-
-
 
       end
     end
@@ -291,3 +280,7 @@ rebounds = 0
   end
   return rebounds
 end
+
+def player_by_number(number)
+  
+end 
